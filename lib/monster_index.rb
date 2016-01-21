@@ -1,5 +1,8 @@
-require "monster_index/version"
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
 
-module MonsterIndex
-  # Your code goes here...
-end
+require_relative "./monster_index/version"
+require_relative './monster_index/monster'
+require_relative './monster_index/scraper'
+require_relative './monster_index/cli'

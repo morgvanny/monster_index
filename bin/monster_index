@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "monster_index"
+
+MonsterIndex::CLI.new.call
