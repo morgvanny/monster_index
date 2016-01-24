@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
+require 'pry'
 
 require_relative "./monster_index/version"
 require_relative './monster_index/monster'

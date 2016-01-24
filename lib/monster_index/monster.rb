@@ -1,5 +1,5 @@
 class MonsterIndex::Monster
-  attr_accessor :name, :bio, :size_type, :hit_dice, :initiative, :speed, :ac, :attack, :alignment, :url
+  attr_accessor :name, :size_type, :hit_dice, :initiative, :speed, :ac, :attack, :alignment, :url
 
   @@all = []
 
@@ -31,6 +31,7 @@ class MonsterIndex::Monster
     @@all.each do |monster|
       puts "#{monster.name}"
     end
+    puts
   end
 
   def self.list_some(letter)
@@ -39,19 +40,24 @@ class MonsterIndex::Monster
         puts "#{monster.name}"
       end
     end
+    puts
   end
 
   def self.view_profile(name)
-    puts "Description:"
-    puts "#{bio}\n"
-    puts "Size/Type: #{size_type}"
-    puts "Hit Dice: #{hit_dice}"
-    puts "Initiative: #{initiative}"
-    puts "Speed: #{speed}"
-    puts "AC: #{ac}"
-    puts "Attack: #{attack}"
-    puts "Alignment: #{alignment}"
-    puts "More info at: #{url}"
+    monster = @@all.find {|one| one.name == name}
+    puts "Size/Type: #{monster.size_type}"
+    puts "Hit Dice: #{monster.hit_dice}"
+    puts "Initiative: #{monster.initiative}"
+    puts "Speed: #{monster.speed}"
+    puts "AC: #{monster.ac}"
+    puts "Attack: #{monster.attack}"
+    puts "Alignment: #{monster.alignment}"
+    puts "More info at: #{monster.url}"
+    puts
+  end
+
+  def self.get_monster(name)
+    @@all.find {|one| one.name == name}
   end
 
   def self.all
