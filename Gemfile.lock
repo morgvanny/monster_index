@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    monster_index (0.1.0)
+    monster_index (0.1.1)
       nokogiri
 
 GEM
