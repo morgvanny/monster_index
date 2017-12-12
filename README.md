@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just follow the instructions when you run the app! It will help you with looking up monster types, and give info on each monster.
 
 ## Development
 
